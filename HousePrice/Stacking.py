@@ -60,7 +60,6 @@ test_data['LotFrontage'] = test_data.groupby("Neighborhood")["LotFrontage"].tran
     lambda x: x.fillna(x.median()))
 # Electrical 只有一个NA值，用出现次数最多的值来代替
 train_data['Electrical'] = train_data['Electrical'].fillna(train_data['Electrical'].mode()[0])
-test_data['Electrical'] = test_data['Electrical'].fillna(train_data['Electrical'].mode()[0])
 """
 ##############################################不能简单的用None和0来填充，没有实际意义#####################################
 """
