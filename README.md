@@ -15,74 +15,77 @@
 1. 总共有1460条训练数据，除ID、价格以外，其余列均为特征
 2. 价格数据正常，没有为0的数据，大都分布在50000-500000，最后作为预测目标时，需要取对数
 
-count      1460.000000
-mean     180921.195890
-std       79442.502883（标准差）
-min       34900.000000
-25%      129975.000000
-50%      163000.000000
-75%      214000.000000
-max      755000.000000
+> count      1460.000000
+> mean     180921.195890
+> std       79442.502883（标准差）
+> min       34900.000000
+> 25%      129975.000000
+> 50%      163000.000000
+> 75%      214000.000000
+> max      755000.000000
+>
 
 3. 计算各列为nan的数据量，如果超过一半则直接去掉这一列
 
     **训练数据：**
 
-LotFrontage      259
-**Alley           1369**
-MasVnrType         8
-MasVnrArea         8
-BsmtQual          37
-BsmtCond          37
-BsmtExposure      38
-BsmtFinType1      37
-BsmtFinType2      38
-Electrical         1
-FireplaceQu      690
-GarageType        81
-GarageYrBlt       81
-GarageFinish      81
-GarageQual        81
-GarageCond        81
-**PoolQC          1453**
-**Fence           1179**
-**MiscFeature     1406**
+> LotFrontage      259
+> **Alley           1369**
+> MasVnrType         8
+> MasVnrArea         8
+> BsmtQual          37
+> BsmtCond          37
+> BsmtExposure      38
+> BsmtFinType1      37
+> BsmtFinType2      38
+> Electrical         1
+> FireplaceQu      690
+> GarageType        81
+> GarageYrBlt       81
+> GarageFinish      81
+> GarageQual        81
+> GarageCond        81
+> **PoolQC          1453**
+> **Fence           1179**
+> **MiscFeature     1406**
+>
 
 ​	**测试数据：**
 
-MSZoning           4
-LotFrontage      227
-**Alley           1352**
-Utilities          2
-Exterior1st        1
-Exterior2nd        1
-MasVnrType        16
-MasVnrArea        15
-BsmtQual          44
-BsmtCond          45
-BsmtExposure      44
-BsmtFinType1      42
-BsmtFinSF1         1
-BsmtFinType2      42
-BsmtFinSF2         1
-BsmtUnfSF          1
-TotalBsmtSF        1
-BsmtFullBath       2
-BsmtHalfBath       2
-KitchenQual        1
-Functional         2
-FireplaceQu      730
-GarageType        76
-GarageYrBlt       78
-GarageFinish      78
-GarageCars         1
-GarageArea         1
-GarageQual        78
-GarageCond        78
-**PoolQC          1456**
-**Fence           1169**
-**MiscFeature     1408**
-SaleType           1
+> MSZoning           4
+> LotFrontage      227
+> **Alley           1352**
+> Utilities          2
+> Exterior1st        1
+> Exterior2nd        1
+> MasVnrType        16
+> MasVnrArea        15
+> BsmtQual          44
+> BsmtCond          45
+> BsmtExposure      44
+> BsmtFinType1      42
+> BsmtFinSF1         1
+> BsmtFinType2      42
+> BsmtFinSF2         1
+> BsmtUnfSF          1
+> TotalBsmtSF        1
+> BsmtFullBath       2
+> BsmtHalfBath       2
+> KitchenQual        1
+> Functional         2
+> FireplaceQu      730
+> GarageType        76
+> GarageYrBlt       78
+> GarageFinish      78
+> GarageCars         1
+> GarageArea         1
+> GarageQual        78
+> GarageCond        78
+> **PoolQC          1456**
+> **Fence           1169**
+> **MiscFeature     1408**
+> SaleType           1
+>
 
 加粗的四个特征选择去掉，‘FireplaceQu'缺失值几乎占50%，暂且留着
 
