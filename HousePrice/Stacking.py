@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    @ author cherry
-    @ data 2017/11/28 17:15
-"""
-# -*- coding: utf-8 -*-
-"""
-    @ author cherry
-    @ data 2017/11/26 16:22
+    @author cherry
+    @date 2017/11/28 17:15
 """
 """
 分析数据特点，初步选择可能的特征

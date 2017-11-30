@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    @ author cherry
-    @ data 2017/11/26 16:22
+    @author cherry
+    @date 2017/11/26 16:22
 """
 import pandas as pd
 from sklearn.metrics import mean_squared_error
